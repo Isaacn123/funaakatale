@@ -29,3 +29,6 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->na
 Route::resource('category', CategoryController::class);
 Route::resource('sub-category', subCategoryController::class);
 Route::resource('/dash-b', DashboardController::class);
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
