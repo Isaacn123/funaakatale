@@ -5,6 +5,7 @@ use App\Http\controllers\CategoryController;
 use App\Http\controllers\Controller;
 use App\Http\controllers\DashboardController;
 use App\Http\controllers\subCategoryController;
+use App\Http\controllers\BusinessController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -29,6 +30,11 @@ Route::get('/admin', [App\Http\Controllers\AdminController::class, 'index'])->na
 Route::resource('category', CategoryController::class);
 Route::resource('sub-category', subCategoryController::class);
 Route::resource('/dash-b', DashboardController::class);
+
+
+Route::Resource('business', DashboardController::class);
+
+Route::get('businesslist', [BusinessController::class, 'businessindex']);
 
 // Auth::routes();
 

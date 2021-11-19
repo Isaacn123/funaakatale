@@ -65,8 +65,7 @@
                 <div class="nav-profile-text">
                   <p class="mb-1 text-black">
                     <!-- David Greymaax -->
-                    {{ Auth::user()->name }}
-
+                    {{ Auth::user()->name }} 
                   </p>
                 </div>
               </a>
